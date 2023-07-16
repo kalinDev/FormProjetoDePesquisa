@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { QuestionsMock } from './QuestionsMock.tsx'
 import { RadioButtonGroup } from '../../components/radioButtonGroup/RadioButtonGroup.tsx';
 import { SectionHeader } from '../../components/sectionHeader/SectionHeader.tsx';
+import { useEffect } from 'react';
 
 export function Screening() {
     const {
@@ -25,13 +26,16 @@ export function Screening() {
         question3Value > 0 ||
         question4Value > 0;
 
-    if (isToShowBlockOfQuestions) {
-        setValue('question6', undefined);
-        setValue('question7', undefined);
-        setValue('question8', undefined);
-        setValue('question9', undefined);
-        setValue('question10', undefined);
-    }
+    useEffect(() => {
+        if (!isToShowBlockOfQuestions) {
+            setValue('question6', undefined);
+            setValue('question7', undefined);
+            setValue('question8', undefined);
+            setValue('question9', undefined);
+            setValue('question10', undefined);
+        }
+    }, [isToShowBlockOfQuestions, setValue]);
+    
     const onSubmit = (data: any) => {
         console.log(data);
     };
