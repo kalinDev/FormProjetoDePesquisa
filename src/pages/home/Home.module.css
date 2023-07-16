@@ -43,7 +43,6 @@ footer > button:disabled  {
     }
 
     main {
-        padding-left: 3rem;
         grid-template-columns: 1fr;
     }
 
@@ -52,4 +51,7 @@ footer > button:disabled  {
         align-items: start;
     }
 
+    footer > button {
+        margin-right: 0;
+    }
 }
