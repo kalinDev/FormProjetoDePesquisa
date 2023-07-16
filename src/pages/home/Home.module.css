@@ -1,0 +1,55 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.title {
+    color: var(--blue-600);
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.chkTermos{
+    margin-top: 3rem;
+}
+
+footer {
+    display: flex;
+    justify-content: end;
+}
+
+footer > button {
+    margin-top: 3rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    border-radius: 25px;
+    color: var(--white);
+    background-color: var(--gray-600);
+    border: 0;
+    cursor: pointer;
+}
+
+footer > button:disabled  {
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .wrapper main {
+        padding-left: 3rem;
+        grid-template-columns: 1fr;
+    }
+
+    .wrapper main div {
+        justify-self: center;
+        align-items: start;
+    }
+
+}
