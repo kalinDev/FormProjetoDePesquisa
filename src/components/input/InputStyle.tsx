@@ -1,6 +1,7 @@
 export const InputStyle = {
     questionConteiner: {
         marginTop: '2rem',
+        marginBottom: '2rem'
     },
     input: {
         maxWidth: '50%',

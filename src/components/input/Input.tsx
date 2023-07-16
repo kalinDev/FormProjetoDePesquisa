@@ -1,15 +1,13 @@
 import { FormControl, TextField } from '@mui/material';
-import { RegisterOptions, UseFormRegister } from 'react-hook-form';
+import { FieldError,  FieldErrorsImpl, Merge, RegisterOptions, UseFormRegister } from 'react-hook-form';
 import { InputStyle } from './InputStyle.tsx'
 
 type InputType = 'text' | 'number';
 
 interface InputProps {
   id: string;
-  label: string;
   type: InputType;
-  questionNumber?: string;
-  error: any;
+  error: FieldError | Merge<FieldError, FieldErrorsImpl<any>> | undefined;
   register: UseFormRegister<any>;
   registerOptions?: RegisterOptions;
   placeholder?: string;
@@ -17,9 +15,7 @@ interface InputProps {
 
 export function Input({
   id,
-  label,
   type,
-  questionNumber,
   error,
   register,
   registerOptions,
@@ -28,10 +24,6 @@ export function Input({
 
   return (
     <div style={InputStyle.questionConteiner}>
-      <p>
-        <strong>{questionNumber ? `${questionNumber}.`: "" }</strong>
-        {label}
-      </p>
       <FormControl error={Boolean(error)} fullWidth>
         <TextField
           error={Boolean(error)}
@@ -44,7 +36,7 @@ export function Input({
           sx={InputStyle.input}
           {...register(id, registerOptions)}
           InputProps={ type == "number" ? { inputProps: { min: 0 } }: {}}
-          helperText={error?.message}
+          helperText={error?.message?.toString()}
         />
       </FormControl>
     </div>
