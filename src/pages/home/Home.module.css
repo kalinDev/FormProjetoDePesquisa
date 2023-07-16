@@ -42,12 +42,12 @@ footer > button:disabled  {
         font-size: 87.5%;
     }
 
-    .wrapper main {
+    main {
         padding-left: 3rem;
         grid-template-columns: 1fr;
     }
 
-    .wrapper main div {
+    main div {
         justify-self: center;
         align-items: start;
     }

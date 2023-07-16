@@ -39,8 +39,6 @@ export function Home() {
 
             <Input
               id={`nome`}
-              questionNumber={""}
-              label={"Digite seu nome:"}
               type='text'
               register={register}
               placeholder='Nome'

@@ -30,7 +30,7 @@ export function ModalBlock({ label, title, content }: ModalProps) {
           <h2 id="parent-modal-title">{title}</h2>
           {content.map(paragraph => {
             return (
-              <p >
+              <p key={paragraph}>
                 {paragraph}
               </p>
             )
