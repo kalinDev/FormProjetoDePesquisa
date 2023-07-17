@@ -1,4 +1,4 @@
-import { Modal, Box} from "@mui/material";
+import { Modal, Box, modalClasses} from "@mui/material";
 import {ModalBlockStyle } from './ModalBlockStyle'
 import React from "react";
 
@@ -27,10 +27,10 @@ export function ModalBlock({ label, title, content }: ModalProps) {
         aria-describedby="parent-modal-description"
       >
         <Box sx={{ ...ModalBlockStyle.boxStyle }}>
-          <h2 id="parent-modal-title">{title}</h2>
+          <h2 style={ModalBlockStyle.title} id="parent-modal-title">{title}</h2>
           {content.map(paragraph => {
             return (
-              <p key={paragraph}>
+              <p style={ModalBlockStyle.paragraph} key={paragraph}>
                 {paragraph}
               </p>
             )

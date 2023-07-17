@@ -1,11 +1,19 @@
 import { Input } from '../../components/input/Input.tsx';
-import { useForm } from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import { QuestionsMock } from './QuestionsMock.tsx'
 import { RadioButtonGroup } from '../../components/radioButtonGroup/RadioButtonGroup.tsx';
 import { SectionHeader } from '../../components/sectionHeader/SectionHeader.tsx';
 import { useEffect } from 'react';
 
-export function Screening() {
+  type ScreeningProps = {
+    onSubmit: SubmitHandler<any>;
+    onNext: () => void;
+    defaultValues?: any;
+  };
+
+export function Screening({ onSubmit, onNext, defaultValues }: ScreeningProps) {
+
+    console.log(defaultValues)
     const {
         control,
         register,
@@ -13,7 +21,8 @@ export function Screening() {
         formState: { errors },
         watch,
         setValue,
-    } = useForm();
+    } = useForm({defaultValues});
+
 
     const question1Value = Number(watch('question1'));
     const question2Value = Number(watch('question2'));
@@ -36,13 +45,14 @@ export function Screening() {
         }
     }, [isToShowBlockOfQuestions, setValue]);
     
-    const onSubmit = (data: any) => {
-        console.log(data);
+    const onSubmitt = (data: any) => {
+        onSubmit(data)
+        onNext()
     };
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmitt)}>
                 <SectionHeader
                     title='Questionário de Triagem CRAFFT+N 2.1'
                     content={["Por favor, responda todas as questões com sinceridade; suas respostas serão mantidas em sigilo."]}

@@ -20,5 +20,11 @@ export const ModalBlockStyle = {
         '&:hover': {
             color: 'red'
         }
+    },
+    paragraph: {
+        marginBottom: "1rem"
+    },
+    title: {
+        marginBottom: "2rem"
     }
 }

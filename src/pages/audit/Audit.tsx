@@ -1,22 +1,34 @@
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { RadioButtonGroup } from "../../components/radioButtonGroup/RadioButtonGroup";
 import { SectionHeader } from "../../components/sectionHeader/SectionHeader";
 import { QuestionsMock } from "./QuestionsMock";
 
-export function Audit() {
+
+type Audit = {
+    onSubmit: SubmitHandler<any>;
+    onNext: () => void;
+    onPrev: () => void;
+    defaultValues?: any;
+    previousData:any
+  };
+
+
+export function Audit({ onSubmit, previousData, onPrev, onNext, defaultValues }: Audit) {
     const {
         control,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+    } = useForm(defaultValues);
 
-    function onSubmit(data: any) {
+    function onSubmitt(data: any) {
+        onSubmit(data)
+        onNext()
         console.log(data)
     }
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmitt)}>
 
                 <SectionHeader
                     content={[
@@ -46,6 +58,7 @@ export function Audit() {
                 }
                 )}
                 <footer>
+                <button type="button" onClick={onPrev}>Voltar</button>
                     <button
                     >
                         Continuar
