@@ -118,10 +118,8 @@ export function Home() {
                   />
                 </label>
                 <FormHelperText>{errors[`termoCCS`]?.message?.toString()}</FormHelperText>
-
               </>
             }
-
 
             <footer>
               <button
