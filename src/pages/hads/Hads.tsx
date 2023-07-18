@@ -3,7 +3,7 @@ import { SectionHeader } from "../../components/sectionHeader/SectionHeader";
 import { QuestionsMock } from "./QuestionsMock";
 import { RadioButtonGroup } from "../../components/radioButtonGroup/RadioButtonGroup";
 
-type HadProps = {
+type HadsProps = {
     onSubmit: SubmitHandler<any>;
     onNext: () => void;
     onPrev: () => void;
@@ -12,7 +12,7 @@ type HadProps = {
   };
 
 
-export function Had({ onSubmit, onPrev, onNext, defaultValues }: HadProps) {
+export function Hads({ onSubmit, onPrev, onNext, defaultValues }: HadsProps) {
     const {
         control,
         handleSubmit,
