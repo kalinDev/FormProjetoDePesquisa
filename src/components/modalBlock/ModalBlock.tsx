@@ -1,4 +1,4 @@
-import { Modal, Box, modalClasses} from "@mui/material";
+import { Modal, Box} from "@mui/material";
 import {ModalBlockStyle } from './ModalBlockStyle'
 import React from "react";
 

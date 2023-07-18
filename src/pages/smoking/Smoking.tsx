@@ -3,7 +3,6 @@ import { RadioButtonGroup } from "../../components/radioButtonGroup/RadioButtonG
 import { SectionHeader } from "../../components/sectionHeader/SectionHeader";
 import { QuestionsMock } from "./QuestionsMock";
 
-
 type Audit = {
     onSubmit: SubmitHandler<any>;
     onNext: () => void;
@@ -13,9 +12,7 @@ type Audit = {
   };
 
 
-export function Audit({ onSubmit, previousData, onPrev, onNext, defaultValues }: Audit) {
-
-    console.log(defaultValues)
+export function Smoking({ onSubmit, previousData, onPrev, onNext, defaultValues }: Audit) {
     const {
         control,
         handleSubmit,
@@ -33,12 +30,8 @@ export function Audit({ onSubmit, previousData, onPrev, onNext, defaultValues }:
             <form onSubmit={handleSubmit(onSubmitt)}>
 
                 <SectionHeader
-                    content={[
-                        "*TESTE PARA IDENTIFICAÇÃO DE PROBLEMAS RELACIONADOS AO USO DE ÁLCOOL*",
-                        "O uso de álcool pode afetar sua saúde e pode interferir com algumas medicações e tratamentos. Por isso é importante que você responda sobre o seu uso de álcool",
-                        "Por favor, responda todas as questões com sinceridade; suas respostas serão mantidas em sigilo."
-                    ]}
-                    title="AUDIT"
+                    content={[]}
+                    title=" Escala Razões para Fumar da Universidade de São Paulo (ERF-USP)"
                 />
                 {QuestionsMock.map((question) => {
 
