@@ -4,6 +4,7 @@ import { QuestionsMock } from './QuestionsMock.tsx'
 import { RadioButtonGroup } from '../../components/radioButtonGroup/RadioButtonGroup.tsx';
 import { SectionHeader } from '../../components/sectionHeader/SectionHeader.tsx';
 import { useEffect } from 'react';
+import { FormFooterContainer } from '../../components/formFooterContainer/FormFooterContainer.tsx';
 
   type ScreeningProps = {
     onSubmit: SubmitHandler<any>;
@@ -109,11 +110,9 @@ export function Screening({ onSubmit, onNext, defaultValues }: ScreeningProps) {
                         )
                     }
                 })}
-                <footer>
-                    <button>
-                        Continuar
-                    </button>
-                </footer>
+                <FormFooterContainer
+                    isFirstPage
+                />
             </form>
         </div>
     )

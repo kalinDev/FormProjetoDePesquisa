@@ -2,6 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { RadioButtonGroup } from "../../components/radioButtonGroup/RadioButtonGroup";
 import { SectionHeader } from "../../components/sectionHeader/SectionHeader";
 import { QuestionsMock } from "./QuestionsMock";
+import { FormFooterContainer } from "../../components/formFooterContainer/FormFooterContainer";
 
 
 type Audit = {
@@ -62,13 +63,10 @@ export function Audit({ onSubmit, onPrev, onNext, defaultValues }: Audit) {
                     )
                 }
                 )}
-                <footer>
-                <button type="button" onClick={onPrev}>Voltar</button>
-                    <button
-                    >
-                        Continuar
-                    </button>
-                </footer>
+
+                <FormFooterContainer
+                    onPrev={onPrev}
+                />
             </form>
         </div>
     )

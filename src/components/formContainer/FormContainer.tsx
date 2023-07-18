@@ -70,7 +70,6 @@ const FormContainer = () => {
     return (
         <div>
             {renderCurrentPage()}
-            <pre>{JSON.stringify(formValues, null, 2)}</pre>
         </div>
     );
 };

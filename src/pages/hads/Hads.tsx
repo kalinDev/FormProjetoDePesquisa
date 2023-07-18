@@ -2,6 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { SectionHeader } from "../../components/sectionHeader/SectionHeader";
 import { QuestionsMock } from "./QuestionsMock";
 import { RadioButtonGroup } from "../../components/radioButtonGroup/RadioButtonGroup";
+import { FormFooterContainer } from "../../components/formFooterContainer/FormFooterContainer";
 
 type HadsProps = {
     onSubmit: SubmitHandler<any>;
@@ -55,13 +56,10 @@ export function Hads({ onSubmit, onPrev, onNext, defaultValues }: HadsProps) {
                     )
                 }
                 )}
-                <footer>
-                <button type="button" onClick={onPrev}>Voltar</button>
-                    <button
-                    >
-                        Continuar
-                    </button>
-                </footer>
+                
+                <FormFooterContainer
+                    onPrev={onPrev}
+                />
             </form>
         </div>
     )
