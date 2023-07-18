@@ -13,7 +13,7 @@ type Audit = {
   };
 
 
-export function Audit({ onSubmit, previousData, onPrev, onNext, defaultValues }: Audit) {
+export function Audit({ onSubmit, onPrev, onNext, defaultValues }: Audit) {
 
     console.log(defaultValues)
     const {

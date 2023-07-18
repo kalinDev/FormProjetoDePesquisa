@@ -21,7 +21,7 @@ export function Home() {
 
   const navigate = useNavigate();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = () => {
     navigate('/form');
 
   };

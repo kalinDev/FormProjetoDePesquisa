@@ -3,7 +3,7 @@ import { RadioButtonGroup } from "../../components/radioButtonGroup/RadioButtonG
 import { SectionHeader } from "../../components/sectionHeader/SectionHeader";
 import { QuestionsMock } from "./QuestionsMock";
 
-type Audit = {
+type SmokingProps = {
     onSubmit: SubmitHandler<any>;
     onNext: () => void;
     onPrev: () => void;
@@ -12,7 +12,7 @@ type Audit = {
   };
 
 
-export function Smoking({ onSubmit, previousData, onPrev, onNext, defaultValues }: Audit) {
+export function Smoking({ onSubmit, onPrev, onNext, defaultValues }: SmokingProps) {
     const {
         control,
         handleSubmit,
