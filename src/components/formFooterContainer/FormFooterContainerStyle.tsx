@@ -1,11 +1,15 @@
 export const FormFooterContainerStyle = {
     container: {
       display: 'flex',
-      justifyContent: 'space-between', // Botões nas extremidades
-      alignItems: 'center', // Alinha verticalmente os botões
+      justifyContent: 'space-between',
+      alignItems: 'center', 
+    },
+    button:{
+        minWidth: '8rem',
+        minHeight: '3rem'
     },
     rightButton: {
-      marginLeft: 'auto', // Alinha o botão à direita
+      marginLeft: 'auto',
     },
   };
   
