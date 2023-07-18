@@ -245,29 +245,6 @@ export const QuestionsMock : QuestionItem[] = [
         ]
     },
     {
-        id: 10,
-        type: "radio",
-        label: "Eu perdi o interesse em cuidar da minha aparência:",
-        radios: [
-            {
-                label: 'completamente',
-                value: 'completamente'
-            },
-            {
-                label: 'não estou mais me cuidando como eu deveria',
-                value: 'não estou mais me cuidando como eu deveria'
-            },
-            {
-                label: 'talvez não tanto quanto antes',
-                value: 'talvez não tanto quanto antes'
-            },
-            {
-                label: 'me cuido do mesmo jeito que antes',
-                value: 'me cuido do mesmo jeito que antes'
-            }
-        ]
-    },
-    {
         id: 11,
         type: "radio",
         label: "Eu me sinto inquieta (o), como se eu não pudesse ficar parada (o) em lugar nenhum:",

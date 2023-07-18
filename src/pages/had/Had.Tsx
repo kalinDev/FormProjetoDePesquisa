@@ -1,7 +1,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { RadioButtonGroup } from "../../components/radioButtonGroup/RadioButtonGroup";
 import { SectionHeader } from "../../components/sectionHeader/SectionHeader";
 import { QuestionsMock } from "./QuestionsMock";
+import { RadioButtonGroup } from "../../components/radioButtonGroup/RadioButtonGroup";
 
 type HadProps = {
     onSubmit: SubmitHandler<any>;

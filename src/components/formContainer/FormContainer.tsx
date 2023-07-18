@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Screening } from '../../pages/screening/Screening';
 import { Audit } from '../../pages/audit/Audit';
 import { Smoking } from '../../pages/smoking/Smoking';
-import { Had } from '../../pages/had/Had';
+import { Had } from '../../pages/had/Had'
 
 const FormContainer = () => {
     const [formValues, setFormValues] = useState([{}]);
