@@ -2,7 +2,7 @@ type InputType = 'radio'
 
 interface Radio {
     label: string;
-    value: string | 'number';
+    value: string;
 }
 
 interface QuestionItem {

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Screening } from '../../pages/screening/Screening';
 import { Audit } from '../../pages/audit/Audit';
 import { Smoking } from '../../pages/smoking/Smoking';
+import { Had } from '../../pages/had/Had';
 
 const FormContainer = () => {
     const [formValues, setFormValues] = useState([{}]);
@@ -41,9 +42,19 @@ const FormContainer = () => {
                         defaultValues={formValues[currentPage]}
                     />
                 );
-            case 2: 
+            case 2:
                 return (
                     <Smoking
+                        onSubmit={handleFormSubmit}
+                        onPrev={handlePrevPage}
+                        onNext={handleNextPage}
+                        previousData={formValues[currentPage - 1]}
+                        defaultValues={formValues[currentPage]}
+                    />
+                );
+            case 3:
+                return (
+                    <Had
                         onSubmit={handleFormSubmit}
                         onPrev={handlePrevPage}
                         onNext={handleNextPage}
