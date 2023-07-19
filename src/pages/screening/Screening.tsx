@@ -14,7 +14,6 @@ import { FormFooterContainer } from '../../components/formFooterContainer/FormFo
 
 export function Screening({ onSubmit, onNext, defaultValues }: ScreeningProps) {
 
-    console.log(defaultValues)
     const {
         control,
         register,

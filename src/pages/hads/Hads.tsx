@@ -23,7 +23,6 @@ export function Hads({ onSubmit, onPrev, onNext, defaultValues }: HadsProps) {
     function onSubmitt(data: any) {
         onSubmit(data)
         onNext()
-        console.log(data)
     }
 
     return (

@@ -23,7 +23,6 @@ export function Smoking({ onSubmit, onPrev, onNext, defaultValues }: SmokingProp
     function onSubmitt(data: any) {
         onSubmit(data)
         onNext()
-        console.log(data)
     }
 
     return (

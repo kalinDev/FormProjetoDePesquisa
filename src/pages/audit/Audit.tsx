@@ -16,7 +16,6 @@ type Audit = {
 
 export function Audit({ onSubmit, onPrev, onNext, defaultValues }: Audit) {
 
-    console.log(defaultValues)
     const {
         control,
         handleSubmit,
@@ -26,7 +25,6 @@ export function Audit({ onSubmit, onPrev, onNext, defaultValues }: Audit) {
     function onSubmitt(data: any) {
         onSubmit(data)
         onNext()
-        console.log(data)
     }
 
     return (
