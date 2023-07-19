@@ -3,10 +3,17 @@ export const InputStyle = {
         marginTop: '2rem',
         marginBottom: '2rem'
     },
-    input: {
-        maxWidth: '50%',
+    inputText: {
+        width: '70%',
         marginTop: '1rem',
         marginLeft: '.25rem',
         background: 'transparent',
     },
+    inputNumber: {
+        maxWidth: '40%',
+        marginTop: '1rem',
+        marginLeft: '.25rem',
+        background: 'transparent',
+    }
+    
 };

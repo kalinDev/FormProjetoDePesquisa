@@ -36,7 +36,7 @@ export const QuestionsMock: QuestionItem[] = [
         id: 4,
         type: "number",
         placeholder: "Quantos dias",
-        label: "Você usa qualquer tipo de maconha (por exemplo, erva, óleo ou haxixe para fumar, vapear ou em alimentos) ou “maconha sintética” (por exemplo, “K2” ou “Spice”)?",
+        label: "Usa um dispositivo de vaporização* que contenha nicotina e/ou sabores, ou usa quaisquer produtos do tabaco?",
     },
     {
         id: 5,

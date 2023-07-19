@@ -316,7 +316,7 @@ export const QuestionsMock : QuestionItem[] = [
     {
         id: 14,
         type: "radio",
-        label: "De repente, tenho a sensação de entrar em pânico:",
+        label: "Consigo sentir prazer quando assito a um bom programa de televisão, de rádio ou quando leio alguma coisa:",
         radios: [
             {
                 label: 'quase sempre',

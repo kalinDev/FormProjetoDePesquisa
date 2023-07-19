@@ -2,14 +2,15 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { RadioButtonGroup } from "../../components/radioButtonGroup/RadioButtonGroup";
 import { SectionHeader } from "../../components/sectionHeader/SectionHeader";
 import { QuestionsMock } from "./QuestionsMock";
+import { FormFooterContainer } from "../../components/formFooterContainer/FormFooterContainer";
 
 type SmokingProps = {
     onSubmit: SubmitHandler<any>;
     onNext: () => void;
     onPrev: () => void;
     defaultValues?: any;
-    previousData:any
-  };
+    previousData: any
+};
 
 
 export function Smoking({ onSubmit, onPrev, onNext, defaultValues }: SmokingProps) {
@@ -17,7 +18,7 @@ export function Smoking({ onSubmit, onPrev, onNext, defaultValues }: SmokingProp
         control,
         handleSubmit,
         formState: { errors },
-    } = useForm({defaultValues});
+    } = useForm({ defaultValues });
 
     function onSubmitt(data: any) {
         onSubmit(data)
@@ -55,13 +56,9 @@ export function Smoking({ onSubmit, onPrev, onNext, defaultValues }: SmokingProp
                     )
                 }
                 )}
-                <footer>
-                <button type="button" onClick={onPrev}>Voltar</button>
-                    <button
-                    >
-                        Continuar
-                    </button>
-                </footer>
+                <FormFooterContainer
+                    onPrev={onPrev}
+                />
             </form>
         </div>
     )

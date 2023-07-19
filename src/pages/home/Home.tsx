@@ -35,10 +35,10 @@ export function Home() {
             <h1>ao <span className={styles.title}>projeto de pesquisa</span></h1>
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
-
             <Input
               id={`nome`}
               type='text'
+              label={'Digite o seu nome: '}
               register={register}
               placeholder='Nome'
               registerOptions={{

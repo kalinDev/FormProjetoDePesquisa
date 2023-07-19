@@ -3,6 +3,7 @@ import { Screening } from '../../pages/screening/Screening';
 import { Audit } from '../../pages/audit/Audit';
 import { Smoking } from '../../pages/smoking/Smoking';
 import { Hads } from '../../pages/hads/Hads';
+import { ScrollToTop } from '../scrollToTop/ScrollToTop';
 
 const FormContainer = () => {
     const [formValues, setFormValues] = useState([{}]);
@@ -69,6 +70,7 @@ const FormContainer = () => {
 
     return (
         <div>
+            <ScrollToTop/>
             {renderCurrentPage()}
         </div>
     );

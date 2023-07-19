@@ -11,6 +11,7 @@ interface InputProps {
   register: UseFormRegister<any>;
   registerOptions?: RegisterOptions;
   placeholder?: string;
+  label?: string;
 }
 
 export function Input({
@@ -20,10 +21,12 @@ export function Input({
   register,
   registerOptions,
   placeholder,
+  label
 }: InputProps) {
 
   return (
     <div style={InputStyle.questionConteiner}>
+      {label && <label>{label}</label>}
       <FormControl error={Boolean(error)} fullWidth>
         <TextField
           error={Boolean(error)}
@@ -33,7 +36,7 @@ export function Input({
             : placeholder}
           id={id}
           type={type}
-          sx={InputStyle.input}
+          sx={type === 'text' ? InputStyle.inputText : InputStyle.inputNumber}
           {...register(id, registerOptions)}
           InputProps={ type == "number" ? { inputProps: { min: 0 } }: {}}
           helperText={error?.message?.toString()}
