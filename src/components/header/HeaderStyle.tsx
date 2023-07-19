@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export const HeaderStyle = {
   container: {
     backgroundColor: 'var(--white)',
@@ -6,6 +8,6 @@ export const HeaderStyle = {
     padding: '1.25rem 0',
     color: 'var(--blue-600)',
     fontSize: '1.5rem',
-    textAlign: 'center',
-  },
+    textAlign: 'center'
+  } as CSSProperties,
 };
