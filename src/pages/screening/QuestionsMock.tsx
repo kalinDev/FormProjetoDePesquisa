@@ -128,4 +128,94 @@ export const QuestionsMock: QuestionItem[] = [
             }
         ]
     },
+    {
+        id: 11,
+        type: "radio",
+        label: "Você já tentou PARAR de usar esse produtos, mas não conseguiu?",
+        radios: [
+            {
+                label: 'Não',
+                value: 'não'
+            },
+            {
+                label: 'Sim',
+                value: 'sim'
+            }
+        ]
+    },
+    {
+        id: 12,
+        type: "radio",
+        label: "ATUALMENTE, você usa vaporizadores ou tabaco porque é muito difícil parar?",
+        radios: [
+            {
+                label: 'Não',
+                value: 'não'
+            },
+            {
+                label: 'Sim',
+                value: 'sim'
+            }
+        ]
+    },
+    {
+        id: 13,
+        type: "radio",
+        label: "Você já se sentiu como se estivesse VICIADO(A) em vaporização ou tabaco?",
+        radios: [
+            {
+                label: 'Não',
+                value: 'não'
+            },
+            {
+                label: 'Sim',
+                value: 'sim'
+            }
+        ]
+    },
+    {
+        id: 14,
+        type: "radio",
+        label: "Você já sentiu um forte DESEJO de usar dispositivos de vaporização ou tabaco?",
+        radios: [
+            {
+                label: 'Não',
+                value: 'não'
+            },
+            {
+                label: 'Sim',
+                value: 'sim'
+            }
+        ]
+    },
+    {
+        id: 15,
+        type: "radio",
+        label: "Você já sentiu que você realmente PRECISAVA usar dispositivos de vaporização ou tabaco?",
+        radios: [
+            {
+                label: 'Não',
+                value: 'não'
+            },
+            {
+                label: 'Sim',
+                value: 'sim'
+            }
+        ]
+    },
+    {
+        id: 16,
+        type: "radio",
+        label: "É difícil para você não usar dispositivos de vaporização ou tabaco em LUGARES em que isso não é permitido, como na escola?",
+        radios: [
+            {
+                label: 'Não',
+                value: 'não'
+            },
+            {
+                label: 'Sim',
+                value: 'sim'
+            }
+        ]
+    },
 ];

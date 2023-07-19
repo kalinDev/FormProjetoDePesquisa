@@ -32,8 +32,10 @@ export function Screening({ onSubmit, onNext, defaultValues }: ScreeningProps) {
     const isToShowBlockOfQuestions =
         question1Value > 0 ||
         question2Value > 0 ||
-        question3Value > 0 ||
-        question4Value > 0;
+        question3Value > 0;
+
+
+    const isToShowSecondBlockOfQuestions = question4Value > 0
 
     useEffect(() => {
         if (!isToShowBlockOfQuestions) {
@@ -44,7 +46,19 @@ export function Screening({ onSubmit, onNext, defaultValues }: ScreeningProps) {
             setValue('question10', undefined);
         }
     }, [isToShowBlockOfQuestions, setValue]);
-    
+
+
+    useEffect(() => {
+        if (!isToShowBlockOfQuestions) {
+            setValue('question11', undefined);
+            setValue('question12', undefined);
+            setValue('question13', undefined);
+            setValue('question14', undefined);
+            setValue('question15', undefined);
+            setValue('question16', undefined);
+        }
+    }, [isToShowSecondBlockOfQuestions, setValue]);
+
     const onSubmitt = (data: any) => {
         onSubmit(data)
         onNext()
@@ -86,7 +100,9 @@ export function Screening({ onSubmit, onNext, defaultValues }: ScreeningProps) {
                     }
                     else if (question.type === 'radio') {
 
-                        if (question.id > 5 && !isToShowBlockOfQuestions) return;
+                        if (question.id > 5  && question.id <= 10 && !isToShowBlockOfQuestions) return;
+
+                        if( question.id > 10 && !isToShowSecondBlockOfQuestions) return
 
                         return (
                             <div
