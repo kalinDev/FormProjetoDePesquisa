@@ -4,6 +4,7 @@ export const DateInputStyle = {
         marginBottom: '2rem'
     },
     input: {
+        minWidth: '10rem',
         width: '25%',
         marginTop: '1rem',
         marginLeft: '.25rem',
