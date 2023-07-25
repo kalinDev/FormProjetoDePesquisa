@@ -7,12 +7,14 @@ import { useEffect } from 'react';
 import { FormFooterContainer } from '../../components/formFooterContainer/FormFooterContainer.tsx';
 
   type ScreeningProps = {
+    onPrev: () => void;
     onSubmit: SubmitHandler<any>;
     onNext: () => void;
     defaultValues?: any;
+    previousData:any
   };
 
-export function Screening({ onSubmit, onNext, defaultValues }: ScreeningProps) {
+export function Screening({ onSubmit, onPrev, onNext, defaultValues }: ScreeningProps) {
 
     const {
         control,
@@ -126,7 +128,7 @@ export function Screening({ onSubmit, onNext, defaultValues }: ScreeningProps) {
                     }
                 })}
                 <FormFooterContainer
-                    isFirstPage
+                    onPrev={onPrev}
                 />
             </form>
         </div>

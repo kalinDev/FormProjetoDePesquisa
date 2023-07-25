@@ -4,6 +4,7 @@ import { Audit } from '../../pages/audit/Audit';
 import { Smoking } from '../../pages/smoking/Smoking';
 import { Hads } from '../../pages/hads/Hads';
 import { ScrollToTop } from '../scrollToTop/ScrollToTop';
+import { Sociodemographics } from '../../pages/sociodemographics/Sociodemographics';
 
 const FormContainer = () => {
     const [formValues, setFormValues] = useState([{}]);
@@ -26,14 +27,25 @@ const FormContainer = () => {
     const renderCurrentPage = () => {
         switch (currentPage) {
             case 0:
-                return (
-                    <Screening
+                return(
+                    <Sociodemographics
+                        onPrev={handlePrevPage}
                         onSubmit={handleFormSubmit}
                         onNext={handleNextPage}
                         defaultValues={formValues[currentPage]}
                     />
-                );
+                )
             case 1:
+                return (
+                    <Screening
+                        onPrev={handlePrevPage}
+                        onSubmit={handleFormSubmit}
+                        onNext={handleNextPage}
+                        previousData={formValues[currentPage - 1]}
+                        defaultValues={formValues[currentPage]}
+                    />
+                );
+            case 2:
                 return (
                     <Audit
                         onSubmit={handleFormSubmit}
@@ -43,7 +55,7 @@ const FormContainer = () => {
                         defaultValues={formValues[currentPage]}
                     />
                 );
-            case 2:
+            case 3:
                 return (
                     <Smoking
                         onSubmit={handleFormSubmit}
@@ -53,7 +65,7 @@ const FormContainer = () => {
                         defaultValues={formValues[currentPage]}
                     />
                 );
-            case 3:
+            case 4:
                 return (
                     <Hads
                         onSubmit={handleFormSubmit}
