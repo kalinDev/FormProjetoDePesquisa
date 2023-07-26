@@ -20,14 +20,14 @@ export function Smoking({ onSubmit, onPrev, onNext, defaultValues }: SmokingProp
         formState: { errors },
     } = useForm({ defaultValues });
 
-    function onSubmitt(data: any) {
+    function onSubmitHandler(data: any) {
         onSubmit(data)
         onNext()
     }
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmitt)}>
+            <form onSubmit={handleSubmit(onSubmitHandler)}>
 
                 <SectionHeader
                     content={[]}

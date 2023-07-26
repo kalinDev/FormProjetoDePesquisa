@@ -61,14 +61,14 @@ export function Screening({ onSubmit, onPrev, onNext, defaultValues }: Screening
         }
     }, [isToShowSecondBlockOfQuestions, setValue]);
 
-    const onSubmitt = (data: any) => {
+    const onSubmitHandler = (data: any) => {
         onSubmit(data)
         onNext()
     };
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmitt)}>
+            <form onSubmit={handleSubmit(onSubmitHandler)}>
                 <SectionHeader
                     title='Questionário de Triagem CRAFFT+N 2.1'
                     content={["Por favor, responda todas as questões com sinceridade; suas respostas serão mantidas em sigilo."]}

@@ -8,13 +8,11 @@ interface DateInputProps {
   register: UseFormRegister<any>;
   registerOptions?: RegisterOptions;
   placeholder?: string;
-  label?: string;
 }
 
-export function DateInput({ label, id, error, register, registerOptions, placeholder }: DateInputProps) {
+export function DateInput({ id, error, register, registerOptions, placeholder }: DateInputProps) {
   return (
     <div style={DateInputStyle.questionConteiner}>
-      {label && <label>{label}</label>}
       <input
         style={DateInputStyle.input}
         type="date"

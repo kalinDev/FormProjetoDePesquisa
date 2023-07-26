@@ -5,6 +5,7 @@ import { Smoking } from '../../pages/smoking/Smoking';
 import { Hads } from '../../pages/hads/Hads';
 import { ScrollToTop } from '../scrollToTop/ScrollToTop';
 import { Sociodemographics } from '../../pages/sociodemographics/Sociodemographics';
+import { Marijuana } from '../../pages/marijuana/Marijuana';
 
 const FormContainer = () => {
     const [formValues, setFormValues] = useState([{}]);
@@ -75,8 +76,20 @@ const FormContainer = () => {
                         defaultValues={formValues[currentPage]}
                     />
                 );
+            case 5:
+                return(
+                    <Marijuana
+                    onSubmit={handleFormSubmit}
+                    onPrev={handlePrevPage}
+                    onNext={handleNextPage}
+                    previousData={formValues[currentPage - 1]}
+                    defaultValues={formValues[currentPage]}
+                />
+                )
             default:
-                return null;
+                return (
+                    <h1>Muito Obrigado!</h1>
+                );
         }
     };
 
