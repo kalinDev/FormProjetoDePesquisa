@@ -23,7 +23,7 @@ export function Marijuana({ onSubmit, onPrev, onNext, defaultValues }: Marijuana
 
     function onSubmitHandler(data: any) {
         onSubmit(data)
-        console.log(errors)
+        onNext()
     }
 
     return (
