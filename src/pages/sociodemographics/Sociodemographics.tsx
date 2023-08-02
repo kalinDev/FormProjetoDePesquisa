@@ -5,11 +5,11 @@ import { QuestionsMock } from "./QuestionsMock";
 import { FormFooterContainer } from "../../components/formFooterContainer/FormFooterContainer";
 import { Input } from "../../components/input/Input";
 import { DateInput } from "../../components/dateInput/DateInput";
+import CheckboxGroup from "../../components/checkboxGroup/CheckboxGroup";
 
 type SociodemographicsProps = {
     onSubmit: SubmitHandler<any>;
     onNext: () => void;
-    onPrev: () => void;
     defaultValues?: any;
 };
 
@@ -106,6 +106,7 @@ export function Sociodemographics({ onSubmit, onNext, defaultValues }: Sociodemo
                                     <strong>{`${question.id}.`}</strong>
                                     {`${question.label}`}
                                 </p>
+
                                 <DateInput
                                     id={`question${question.id}`}
                                     error={errors[`question${question.id}`]}
@@ -117,6 +118,22 @@ export function Sociodemographics({ onSubmit, onNext, defaultValues }: Sociodemo
                             </div>
                         )
                     }
+                    else if (question.type === "checkBoxGroup") {
+                        return (
+                          <div key={`question${question.id}`}>
+                            <p>
+                              <strong>{`${question.id}.`}</strong>
+                              {`${question.label}`}
+                            </p>
+                            <CheckboxGroup
+                                id={`question${question.id}`}
+                              options={question.checkboxes ?? []}
+                              error={errors[`question${question.id}`]}
+                              register={register}
+                            />
+                          </div>
+                        );
+                      }
 
                 }
                 )}

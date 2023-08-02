@@ -1,30 +1,35 @@
 import styles from './Home.module.css';
 import avatar from '../../assets/avatar.svg';
-import { useNavigate } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { Input } from '../../components/input/Input';
 
 import { Checkbox, FormControlLabel, FormHelperText } from '@mui/material';
 import { ModalBlock } from '../../components/modalBlock/ModalBlock';
 
-export function Home() {
+
+type HomeProps = {
+  onSubmit: SubmitHandler<any>;
+  onNext: () => void;
+};
+
+
+export function Home({ onSubmit, onNext }: HomeProps) {
 
   const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    watch
+      register,
+      handleSubmit,
+      watch,
+      formState: { errors },
   } = useForm();
+
 
 
   const name = watch('nome')
 
-  const navigate = useNavigate();
-
-  const onSubmit = () => {
-    navigate('/form');
-
-  };
+  const onSubmitHandler = (data: any) => {
+    onSubmit(data)
+    onNext()
+};
   return (
     <div>
       <main>
@@ -34,7 +39,7 @@ export function Home() {
             <h1>Seja bem-vindo</h1>
             <h1>ao <span className={styles.title}>projeto de pesquisa</span></h1>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmitHandler)}>
             <Input
               id={`nome`}
               type='text'

@@ -78,8 +78,8 @@ export const QuestionsMock : QuestionItem[] = [
                 value: 'Nunca'
             },
             {
-                label: 'Menos que umavez por mês',
-                value: 'Menos que umavez por mês'
+                label: 'Menos que uma vez por mês',
+                value: 'Menos que uma vez por mês'
             },
             {
                 label: 'Uma vez por mês',
@@ -105,8 +105,8 @@ export const QuestionsMock : QuestionItem[] = [
                 value: 'Nunca'
             },
             {
-                label: 'Menos que umavez por mês',
-                value: 'Menos que umavez por mês'
+                label: 'Menos que uma vez por mês',
+                value: 'Menos que uma vez por mês'
             },
             {
                 label: 'Uma vez por mês',
@@ -132,8 +132,8 @@ export const QuestionsMock : QuestionItem[] = [
                 value: 'Nunca'
             },
             {
-                label: 'Menos que umavez por mês',
-                value: 'Menos que umavez por mês'
+                label: 'Menos que uma vez por mês',
+                value: 'Menos que uma vez por mês'
             },
             {
                 label: 'Uma vez por mês',
@@ -159,8 +159,8 @@ export const QuestionsMock : QuestionItem[] = [
                 value: 'Nunca'
             },
             {
-                label: 'Menos que umavez por mês',
-                value: 'Menos que umavez por mês'
+                label: 'Menos que uma vez por mês',
+                value: 'Menos que uma vez por mês'
             },
             {
                 label: 'Uma vez por mês',
@@ -186,8 +186,8 @@ export const QuestionsMock : QuestionItem[] = [
                 value: 'Nunca'
             },
             {
-                label: 'Menos que umavez por mês',
-                value: 'Menos que umavez por mês'
+                label: 'Menos que uma vez por mês',
+                value: 'Menos que uma vez por mês'
             },
             {
                 label: 'Uma vez por mês',
@@ -213,8 +213,8 @@ export const QuestionsMock : QuestionItem[] = [
                 value: 'Nunca'
             },
             {
-                label: 'Menos que umavez por mês',
-                value: 'Menos que umavez por mês'
+                label: 'Menos que uma vez por mês',
+                value: 'Menos que uma vez por mês'
             },
             {
                 label: 'Uma vez por mês',

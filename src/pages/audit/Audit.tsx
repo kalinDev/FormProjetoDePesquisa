@@ -10,7 +10,6 @@ type Audit = {
     onNext: () => void;
     onPrev: () => void;
     defaultValues?: any;
-    previousData:any
   };
 
 

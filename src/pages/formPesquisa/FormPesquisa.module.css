@@ -1,0 +1,33 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+h3 {
+    color: var(--blue-600);
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .content div {
+        justify-self: center;
+        align-items: start;
+    }
+
+    footer > button {
+        margin-right: 0;
+    }
+}

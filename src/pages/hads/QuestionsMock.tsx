@@ -17,7 +17,7 @@ export const QuestionsMock : QuestionItem[] = [
     {
         id: 1,
         type: "radio",
-        label: "Eu me sinto tensa (o) ou contraída (o)",
+        label: "Eu me sinto tensa(o) ou contraída(o)",
         radios: [
             {
                 label: 'a maior parte do tempo',
@@ -178,7 +178,7 @@ export const QuestionsMock : QuestionItem[] = [
     {
         id: 8,
         type: "radio",
-        label: "Eu estou lenta (o) para pensar e fazer coisas:",
+        label: "Eu estou lenta(o) para pensar e fazer coisas:",
         radios: [
             {
                 label: 'quase sempre',
@@ -247,7 +247,7 @@ export const QuestionsMock : QuestionItem[] = [
     {
         id: 11,
         type: "radio",
-        label: "Eu me sinto inquieta (o), como se eu não pudesse ficar parada (o) em lugar nenhum:",
+        label: "Eu me sinto inquieta(o), como se eu não pudesse ficar parada(o) em lugar nenhum:",
         radios: [
             {
                 label: 'sim, demais',
@@ -270,7 +270,7 @@ export const QuestionsMock : QuestionItem[] = [
     {
         id: 12,
         type: "radio",
-        label: "Fico animada (o) esperando animado as coisas boas que estão por vir",
+        label: "Fico animada(o) esperando animado as coisas boas que estão por vir",
         radios: [
             {
                 label: 'do mesmo jeito que antes',

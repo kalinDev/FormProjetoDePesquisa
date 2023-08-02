@@ -10,6 +10,6 @@ export const FormFooterContainerStyle = {
     },
     rightButton: {
       marginLeft: 'auto',
-    },
+    }, 
   };
   

@@ -9,7 +9,6 @@ type HadsProps = {
     onNext: () => void;
     onPrev: () => void;
     defaultValues?: any;
-    previousData:any
   };
 
 
@@ -20,18 +19,18 @@ export function Hads({ onSubmit, onPrev, onNext, defaultValues }: HadsProps) {
         formState: { errors },
     } = useForm({defaultValues});
 
-    function onSubmitt(data: any) {
+    function onSubmitHandler(data: any) {
         onSubmit(data)
         onNext()
     }
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmitt)}>
+            <form onSubmit={handleSubmit(onSubmitHandler)}>
 
                 <SectionHeader
                     content={[]}
-                    title=" Escala Razões para Fumar da Universidade de São Paulo (ERF-USP)"
+                    title=" Escala HAD - AVALIAÇÃO DO NÍVEL DE ANSIEDADE E DEPRESSÃO"
                 />
                 {QuestionsMock.map((question) => {
 

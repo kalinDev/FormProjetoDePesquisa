@@ -40,7 +40,6 @@ export function SliderInput({ id, error, register, registerOptions }: SliderInpu
             aria-label="Restricted values"
             valueLabelFormat={valueLabelFormat}
             getAriaValueText={valuetext}
-            defaultValue={undefined}
             step={null}
             marks={marks}
             max={marks.length}

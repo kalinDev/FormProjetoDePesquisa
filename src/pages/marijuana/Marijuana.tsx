@@ -9,7 +9,6 @@ type MarijuanaProps = {
     onNext: () => void;
     onPrev: () => void;
     defaultValues?: any;
-    previousData: any
 };
 
 

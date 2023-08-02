@@ -1,6 +1,11 @@
-type InputType = 'radio' | 'text' | 'number' | 'date'
+type InputType = 'radio' | 'text' | 'number' | 'date' | 'checkBoxGroup'
 
 interface Radio {
+    label: string;
+    value: string;
+}
+
+interface CheckBox {
     label: string;
     value: string;
 }
@@ -11,6 +16,7 @@ interface QuestionItem {
     placeholder?: string;
     label: string;
     radios?: Radio[];
+    checkboxes?: CheckBox[];
 }
 
 export const QuestionsMock : QuestionItem[] = [
@@ -109,5 +115,36 @@ export const QuestionsMock : QuestionItem[] = [
         id: 12,
         type: "number",
         label: "Número de pessoas que dependem desta renda:",
-    }
+    },
+    {
+        id: 13,
+        type: "checkBoxGroup",
+        label: "Você faz uso de alguma ou algumas das seguintes substâncias psicoativas?",
+        checkboxes: [
+            {
+                label: 'Cigarros Eletrônicos ou dispositivos “Vape”',
+                value: 'Screening'
+            },
+            {
+                label: 'Álcool',
+                value: 'Audit'
+            },
+            {
+                label: 'Benzodiazepínicos',
+                value: 'Benz'
+            },
+            {
+                label: 'Tabaco',
+                value: 'Smoking'
+            },
+            {
+                label: 'Antidepressivos',
+                value: 'Hads'
+            },
+            {
+                label: 'Cannabis',
+                value: 'Marijuana'
+            }
+        ]
+    },
 ]

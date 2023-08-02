@@ -7,14 +7,12 @@ import { useEffect } from 'react';
 import { FormFooterContainer } from '../../components/formFooterContainer/FormFooterContainer.tsx';
 
   type ScreeningProps = {
-    onPrev: () => void;
     onSubmit: SubmitHandler<any>;
     onNext: () => void;
     defaultValues?: any;
-    previousData:any
   };
 
-export function Screening({ onSubmit, onPrev, onNext, defaultValues }: ScreeningProps) {
+export function Screening({ onSubmit, onNext, defaultValues }: ScreeningProps) {
 
     const {
         control,
@@ -51,7 +49,7 @@ export function Screening({ onSubmit, onPrev, onNext, defaultValues }: Screening
 
 
     useEffect(() => {
-        if (!isToShowBlockOfQuestions) {
+        if (!isToShowSecondBlockOfQuestions) {
             setValue('question11', undefined);
             setValue('question12', undefined);
             setValue('question13', undefined);
@@ -127,9 +125,7 @@ export function Screening({ onSubmit, onPrev, onNext, defaultValues }: Screening
                         )
                     }
                 })}
-                <FormFooterContainer
-                    onPrev={onPrev}
-                />
+                <FormFooterContainer/>
             </form>
         </div>
     )
