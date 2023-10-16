@@ -109,7 +109,7 @@ export function Home({ onSubmit, onNext }: HomeProps) {
                       
                       'Também estou ciente que caso tenha alguma dúvida ética, denúncia ou reclamação a fazer, poderei procurar o Comitê de Ética em Pesquisa (CEP) da Escola Bahiana de Medicina e Saúde Pública, localizado na rua Avenida Dom João VI, nº 274 – Brotas - CEP: 40.285-001 - Salvador – BA. Telefone: (71) 2101-1921. E-mail: cep@bahiana.edu.br. Assim, considero-me satisfeito (a) com as explicações deste documento. Portanto, no momento concordo em participar dessa pesquisa.',
                       
-                      'NOME: ${name}',
+                      `NOME: ${name}`,
                      
                       '',
                       
