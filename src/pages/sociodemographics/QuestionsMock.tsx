@@ -147,4 +147,55 @@ export const QuestionsMock : QuestionItem[] = [
             }
         ]
     },
+    {
+        id: 14,
+        type: "radio",
+        label: "Instituição de graduação:",
+        radios: [
+            {
+                label: 'Uneb',
+                value: 'Uneb'
+            },
+            {
+                label: 'Bahiana',
+                value: 'Bahiana'
+            }
+        ]
+    },
+    {
+        id: 15,
+        type: "radio",
+        label: "Cor/etnia:",
+        radios: [
+            {
+                label: 'Branco',
+                value: 'Branco'
+            },
+            {
+                label: 'Negro',
+                value: 'Negro'
+            },
+            {
+                label: 'Pardo',
+                value: 'Pardo'
+            },
+            {
+                label: 'Amarelo',
+                value: 'Amarelo'
+            },
+            {
+                label: 'Indígena',
+                value: 'Indígena'
+            },
+            {
+                label: 'Não desejo responder',
+                value: 'Não desejo responder'
+            }
+        ]
+    },
+    {
+        id: 16,
+        type: "text",
+        label: "Algum diagnóstico Psiquiátrico prévio:",
+    },
 ]
