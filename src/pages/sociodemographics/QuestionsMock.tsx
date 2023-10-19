@@ -48,7 +48,7 @@ export const QuestionsMock : QuestionItem[] = [
     {
         id: 4,
         type: "text",
-        label: "Nasceu em:",
+        label: "Estado de nascimento:",
     },
     {
         id: 5,
