@@ -1,6 +1,6 @@
 export const SliderInputStyle = {
     questionConteiner: {
-        marginTop: '2rem',
+        marginTop: '1rem',
         marginBottom: '2rem'
     },
     errorMessage:{

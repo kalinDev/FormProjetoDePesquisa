@@ -1,6 +1,6 @@
 export const RadioButtonGroupStyle = {
     container: {
-        marginTop: '2rem',
+        marginTop: '1rem',
         marginBottom: '1rem'
     },
     input: {
