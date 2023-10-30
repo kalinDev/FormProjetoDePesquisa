@@ -140,7 +140,7 @@ const FormPesquisa: React.FC<FormPesquisaProps> = (props) => {
 
   const callAPI = async () => {
     try {
-      const response = await axios.post('https://kalinzada.me/formPesquisa', props.formData);
+      const response = await axios.post('http://bcisoftware.live/formPesquisa', props.formData);
 
       if (response.status >= 200 && response.status < 300) {
         setMessage('Obrigado'); 
