@@ -144,6 +144,9 @@ type SociodemographicsData = {
         "Smoking": boolean;
         "Marijuana": boolean;
     };
+    question14: string;
+    question15: string;
+    question16: string;
 };
 
 type FormData = {
