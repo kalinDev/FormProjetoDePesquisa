@@ -175,6 +175,7 @@ const FormContainer = () => {
         };
         setFormValues(updatedFormValues);
         updatedFormValuesNew = updatedFormValues
+        console.log(updatedFormValues)
     };
 
     const handleNextPage = () => {
