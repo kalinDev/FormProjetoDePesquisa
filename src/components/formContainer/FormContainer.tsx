@@ -211,13 +211,13 @@ const FormContainer = () => {
         let prevPage = currentPage - 1;
 
         while (prevPage >= 0) {
-            const question13 = formValues?.Sociodemographics.question13;
-            if (!question13) return;
+            const question16 = formValues?.Sociodemographics.question16;
+            if (!question16) return;
 
-            const questionsKeys = Object.keys(question13);
-            const questionKey = questionsKeys[prevPage - 1] as keyof typeof question13;
+            const questionsKeys = Object.keys(question16);
+            const questionKey = questionsKeys[prevPage - 1] as keyof typeof question16;
 
-            if (question13[questionKey]) {
+            if (question16[questionKey]) {
                 setCurrentPage(prevPage);
                 return;
             }
