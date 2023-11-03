@@ -40,17 +40,22 @@ export function Home({ onSubmit, onNext }: HomeProps) {
             <h1>ao <span className={styles.title}>projeto de pesquisa</span></h1>
           </div>
           <form onSubmit={handleSubmit(onSubmitHandler)}>
-            <Input
-              id={`nome`}
-              type='text'
-              label={'Digite o seu nome: '}
-              register={register}
-              placeholder='Nome'
-              registerOptions={{
-                required: 'Esse campo é obrigatório',
-              }}
-              error={errors[`nome`]}
-            />
+          <Input
+            id={`nome`}
+            type='text'
+            label={'Digite o seu nome completo: '}
+            register={register}
+            placeholder='Nome'
+            registerOptions={{
+              required: 'Esse campo é obrigatório',
+              validate: (value) => {
+                if (value.split(' ').length < 2) {
+                  return 'Por favor, insira o nome completo.';
+                }
+              },
+            }}
+            error={errors[`nome`]}
+          />
 
             {
               name &&
