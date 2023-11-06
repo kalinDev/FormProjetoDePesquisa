@@ -45,7 +45,7 @@ export function Home({ onSubmit, onNext }: HomeProps) {
             type='text'
             label={'Digite as iniciais do seu nome: '}
             register={register}
-            placeholder='Nome'
+            placeholder='Iniciais do nome'
             registerOptions={{
               required: 'Esse campo é obrigatório',
               validate: (value) => {
