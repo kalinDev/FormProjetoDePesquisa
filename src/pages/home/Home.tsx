@@ -43,14 +43,14 @@ export function Home({ onSubmit, onNext }: HomeProps) {
           <Input
             id={`nome`}
             type='text'
-            label={'Digite o seu nome completo: '}
+            label={'Digite as iniciais do seu nome: '}
             register={register}
             placeholder='Nome'
             registerOptions={{
               required: 'Esse campo é obrigatório',
               validate: (value) => {
-                if (value.split(' ').length < 2) {
-                  return 'Por favor, insira o nome completo.';
+                if (value.length < 3) {
+                  return 'Por favor, insira as iniciais do seu nome.';
                 }
               },
             }}
