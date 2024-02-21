@@ -152,6 +152,37 @@ export function Home({ onSubmit, onNext }: HomeProps) {
                   />
                 </label>
                 <FormHelperText>{errors[`termoCCS`]?.message?.toString()}</FormHelperText>
+
+                <FormControlLabel
+                  className={styles.chkTermos}
+                  value={true}
+                  control={<Checkbox />}
+                  {...register('termoParticipanteUnico', {
+                    required: 'É necessário aceitar o termo para continuar'
+                  })}
+                  label="Sou um novo participante: "
+                  labelPlacement="end"
+                />
+                <label htmlFor="">
+                <ModalBlock
+                    label='Termo de Consentimento para Participação Única'
+                    title='Termo de Consentimento para Participação Única'
+                    content={[
+                      `Prezado(a) Participante, ${name} `,
+
+                      'Agradecemos pelo seu interesse em participar da nossa pesquisa sobre a prevalência e efeitos do uso de substâncias psicoativas por acadêmicos de medicina. No entanto, neste momento estamos buscando apenas respostas de pessoas que nunca participaram anteriormente deste estudo.',
+                      
+                      'Pedimos desculpas por qualquer inconveniente que isso possa causar, mas é essencial para a precisão e validade dos nossos resultados. Se você já participou desta pesquisa anteriormente, agradecemos sua contribuição, mas solicitamos que não prossiga.',
+                      
+                      'Agradecemos sua compreensão e cooperação.',
+                      
+                      'Atenciosamente,',
+
+                      'Equipe de Pesquisa',
+                      ]}
+                  />
+                <FormHelperText>{errors[`termoParticipanteUnico`]?.message?.toString()}</FormHelperText>
+                </label>
               </>
             }
 
